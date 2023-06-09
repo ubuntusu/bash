@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo "How many files you want make :"
+read num
+while [ $num -gt 0 ]
+do
+	read -p "what you wante name youre file : " nm
+	touch $nm.sh
+	chmod +x $nm.sh
+	echo "#!/bin/bash" >> $nm.sh
+        let num=num-1
+done
